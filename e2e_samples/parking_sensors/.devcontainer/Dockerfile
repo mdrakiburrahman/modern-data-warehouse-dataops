@@ -31,6 +31,10 @@ RUN apt-get update \
 RUN apt-get install -y openjdk-8-jdk
 ENV JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 
+# Install dos2unix
+RUN apt-get update \
+    && apt-get -y install dos2unix
+
 RUN mkdir /workspace
 WORKDIR /workspace
 
